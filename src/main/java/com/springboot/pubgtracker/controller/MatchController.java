@@ -2,6 +2,7 @@ package com.springboot.pubgtracker.controller;
 
 import com.springboot.pubgtracker.model.Match;
 import com.springboot.pubgtracker.service.MatchService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +13,7 @@ public class MatchController {
 
     @Autowired
     MatchService matchService;
+
 
     @PostMapping("/addFav")
     void createMatch(@RequestBody Match match){
