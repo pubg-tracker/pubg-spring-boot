@@ -10,5 +10,5 @@ import com.springboot.pubgtracker.model.Player;
 
 @Repository
 public interface PlayerRepository extends MongoRepository<Player,String>{
-	public List<Player> findByPlayerId(Long playerId);
+	public List<Player> findByUserId(String playerId);
 }

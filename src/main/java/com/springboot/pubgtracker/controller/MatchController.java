@@ -17,13 +17,16 @@ public class MatchController {
 
 
     @PostMapping("/addFav")
-    void createMatch(@RequestBody Match match){
+    String createMatch(@RequestBody Match match){
         matchService.createMatch(match);
+        return "Match added successfully";
     }
 
     @DeleteMapping("/deleteFav/{id}")
-    void deleteMatch(@PathVariable("id") String matchId){
+    String deleteMatch(@PathVariable("id") String matchId){
+        System.out.println("matchId = " + matchId);
         matchService.deleteMatch(matchId);
+        return "Match deleted successfully";
     }
 
     @GetMapping("/favMatch/{id}")

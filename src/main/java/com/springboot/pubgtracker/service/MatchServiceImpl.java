@@ -25,7 +25,9 @@ public class MatchServiceImpl implements MatchService {
 
     @Override
     public void deleteMatch(String matchId) {
-        matchRepository.deleteById(matchId);
+        Match match = matchRepository.findById(matchId).get();
+        System.out.println("match = " + match);
+        matchRepository.delete(match);
     }
 
 }

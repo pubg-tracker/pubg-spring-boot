@@ -28,8 +28,8 @@ public class PlayerController {
     }
 
     @GetMapping("/getPlayer/{id}")
-    List<Player> getPlayer(@PathVariable("id") Long playerId){
-        return playerService.getPlayer(playerId);
+    List<Player> getPlayer(@PathVariable("id") String userId){
+        return playerService.getPlayer(userId);
     }
     @GetMapping("/getPlayers")
     List<Player> getPlayers(){

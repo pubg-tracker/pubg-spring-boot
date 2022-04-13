@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface MatchRepository extends MongoRepository<Match,String> {
     public List<Match> findByUserId(Long userId);
+
 }
