@@ -3,11 +3,12 @@ package com.springboot.pubgtracker.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Document(collection = "match")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,5 +17,5 @@ public class Match {
     private String matchId;
     private String titleId;
     private String createdAt;
-    private String userId;
+    private Long userId;
 }

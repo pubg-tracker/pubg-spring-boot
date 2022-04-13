@@ -26,7 +26,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
         http.csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/user")
+                .antMatchers("/createUser","/addFav")
                 .permitAll()
                 .anyRequest()
                 .authenticated();
