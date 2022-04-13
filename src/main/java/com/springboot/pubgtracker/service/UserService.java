@@ -11,4 +11,5 @@ public interface UserService {
     public User findById(long id);
     public User update(User user, long id);
     public void deleteUserById(long id);
+    public User validateUser(String emailAddress);
 }
