@@ -12,26 +12,36 @@ import lombok.NoArgsConstructor;
 public class Player {
 	@Id
     private String id;
-    private String name;
-    private int kills;
-    private int assists;
-    private String timeSurvived;
+	private String name;
+	private String kills;
+	private String matchId;
 	private Long userId;
 
 	public Player() {
 	}
 
-	public Player(String id, String name, int kills, int assists, String timeSurvived, Long userId) {
+	public Player(String id, String name, String kills, String matchId, Long userId) {
 		this.id = id;
 		this.name = name;
 		this.kills = kills;
-		this.assists = assists;
-		this.timeSurvived = timeSurvived;
+		this.matchId = matchId;
 		this.userId = userId;
 	}
 
 	public String getId() {
 		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getMatchId() {
+		return matchId;
+	}
+
+	public void setMatchId(String matchId) {
+		this.matchId = matchId;
 	}
 
 	public Long getUserId() {
@@ -42,10 +52,6 @@ public class Player {
 		this.userId = userId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -54,28 +60,12 @@ public class Player {
 		this.name = name;
 	}
 
-	public int getKills() {
+	public String getKills() {
 		return kills;
 	}
 
-	public void setKills(int kills) {
+	public void setKills(String kills) {
 		this.kills = kills;
-	}
-
-	public int getAssists() {
-		return assists;
-	}
-
-	public void setAssists(int assists) {
-		this.assists = assists;
-	}
-
-	public String getTimeSurvived() {
-		return timeSurvived;
-	}
-
-	public void setTimeSurvived(String timeSurvived) {
-		this.timeSurvived = timeSurvived;
 	}
 
 	@Override
@@ -83,9 +73,9 @@ public class Player {
 		return "Player{" +
 				"id='" + id + '\'' +
 				", name='" + name + '\'' +
-				", kills=" + kills +
-				", assists=" + assists +
-				", timeSurvived='" + timeSurvived + '\'' +
+				", kills='" + kills + '\'' +
+				", matchId='" + matchId + '\'' +
+				", userId=" + userId +
 				'}';
 	}
 }

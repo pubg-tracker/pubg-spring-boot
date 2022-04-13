@@ -18,20 +18,23 @@ public class PlayerController {
 
 
     @PostMapping("/addPlayer")
-    void createPlayer(@RequestBody Player player){
+    String  createPlayer(@RequestBody Player player){
         playerService.createPlayer(player);
+        return "Player added successfully";
     }
 
     @DeleteMapping("/deletePlayer/{id}")
-    void deletePlayer(@PathVariable("id") String playerId){
+    String deletePlayer(@PathVariable("id") String playerId){
     	playerService.deletePlayer(playerId);
+        return "Player deleted successfully";
     }
 
-    @GetMapping("/getPlayer/{id}")
+    @GetMapping("/getFavPlayer/{id}")
     List<Player> getPlayer(@PathVariable("id") String userId){
         return playerService.getPlayer(userId);
     }
-    @GetMapping("/getPlayers")
+
+    @GetMapping("/getGlobalPlayers")
     List<Player> getPlayers(){
         return playerService.getPlayers();
     }
