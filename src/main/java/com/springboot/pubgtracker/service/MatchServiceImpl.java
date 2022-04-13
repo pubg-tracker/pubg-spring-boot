@@ -27,4 +27,5 @@ public class MatchServiceImpl implements MatchService {
     public void deleteMatch(String matchId) {
         matchRepository.deleteById(matchId);
     }
+
 }
