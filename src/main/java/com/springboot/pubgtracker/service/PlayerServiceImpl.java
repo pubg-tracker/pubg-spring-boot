@@ -26,7 +26,7 @@ public class PlayerServiceImpl implements PlayerService{
 	}
 
 	@Override
-	public List<Player> getPlayer(String userId) {
+	public List<Player> getFavouritePlayers(Long userId) {
 		// TODO Auto-generated method stub
 		return playerRepository.findByUserId(userId);
 	}

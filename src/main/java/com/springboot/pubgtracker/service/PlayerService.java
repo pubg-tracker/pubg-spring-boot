@@ -10,7 +10,7 @@ public interface PlayerService {
 
 	void deletePlayer(String playerId);
 
-	List<Player> getPlayer(String playerId);
+	List<Player> getFavouritePlayers(Long userId);
 
 	List<Player> getPlayers();
 

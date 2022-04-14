@@ -26,7 +26,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
         http.csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/createUser","/addFav","/addPlayer","/getPlayers","/favMatch/**","/validate","/deleteFav/**")
+                .antMatchers("/createUser","/addFav",
+                        "/addPlayer","/getPlayers","/favMatch/**",
+                        "/validate","/deleteFav/**","/getGlobalPlayers",
+                        "/getFavPlayers/**","/addPlayer","/deletePlayer/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated();

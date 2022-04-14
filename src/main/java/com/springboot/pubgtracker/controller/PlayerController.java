@@ -29,9 +29,9 @@ public class PlayerController {
         return "Player deleted successfully";
     }
 
-    @GetMapping("/getFavPlayer/{id}")
-    List<Player> getPlayer(@PathVariable("id") String userId){
-        return playerService.getPlayer(userId);
+    @GetMapping("/getFavPlayers/{id}")
+    List<Player> getPlayer(@PathVariable("id") Long userId){
+        return playerService.getFavouritePlayers(userId);
     }
 
     @GetMapping("/getGlobalPlayers")
